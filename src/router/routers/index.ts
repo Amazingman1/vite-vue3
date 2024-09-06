@@ -30,7 +30,7 @@ const notFoundPage: RouteRecordRaw = {
   // vue-router@4的变化，舍弃*通配符
   path: '/:pathMatch(.*)*',
   name: '404',
-  component: () => import('../../views/common/404Page.vue')
+  component: () => import('@/views/common/404Page.vue')
 }
 
 export default [rootRoute, ...routes, notFoundPage]
