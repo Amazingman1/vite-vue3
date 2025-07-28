@@ -9,7 +9,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tailwindcss/vite": "^4.1.11",
     "element-plus": "^2.8.0",
+    "sass": "^1.89.2",
+    "tailwindcss": "^4.1.11",
     "vue": "^3.4.37",
     "vue-router": "^4.4.3"
   },

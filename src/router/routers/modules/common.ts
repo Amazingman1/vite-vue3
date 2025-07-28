@@ -18,7 +18,7 @@ const routes: RouteRecordRaw[] = [
       // <van-icon name="label" />
       icon: 'wap-home'
     },
-    component: () => import('../../../views/HomePage.vue')
+    component: () => import('@/views/HomePage.vue')
   },
   {
     path: '/login',
@@ -27,7 +27,7 @@ const routes: RouteRecordRaw[] = [
       title: '登录',
       icon: 'label'
     },
-    component: () => import('../../../views/LoginPage.vue')
+    component: () => import('@/views/LoginPage.vue')
   }
 ]
 

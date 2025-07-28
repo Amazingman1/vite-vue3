@@ -1,0 +1,14 @@
+@forward 'element-plus/theme-chalk/src/button.scss';
+
+.el-button {
+  &--import {
+    --el-button-text-color: #ffffff;
+    --el-button-bg-color: #2dcae4;
+    --el-button-border-color: #2dcae4;
+    --el-button-hover-bg-color: #7fdcec;
+    --el-button-hover-text-color: #ffffff;
+    --el-button-active-bg-color: #2dcae4;
+    --el-button-hover-border-color: #2dcae4;
+    --el-button-active-border-color: #12c6e6;
+  }
+}

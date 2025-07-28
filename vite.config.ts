@@ -9,15 +9,15 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'
-
-// https://vitejs.dev/config/
+import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
+  base: './',
   resolve: {
     alias: [
       { find: '@', replacement: resolve(__dirname,'src')},
     ]
   },
-  plugins: [vue()],
+  plugins: [vue(), tailwindcss()],
 
   server: {
     proxy: {
