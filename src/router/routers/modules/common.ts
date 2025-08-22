@@ -28,6 +28,24 @@ const routes: RouteRecordRaw[] = [
       icon: 'label'
     },
     component: () => import('@/views/LoginPage.vue')
+  },
+    {
+    path: '/json',
+    name: 'json',
+    meta: {
+      title: 'json编辑',
+      icon: 'label'
+    },
+    component: () => import('@/views/JsonView.vue')
+  },
+     {
+    path: '/tree',
+    name: 'tree',
+    meta: {
+      title: 'treeVue',
+      icon: 'label'
+    },
+    component: () => import('@/views/VueTree.vue')
   }
 ]
 

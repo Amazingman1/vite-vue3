@@ -20,12 +20,51 @@
     </div>
     <div v-show="item.vaild" class="text-red-500 text-left w-full line-height-[1px]">请填写完整</div>
   </div>
+
+    <div class="m-4">
+    <p>default</p>
+    <el-select
+      v-model="value1"
+      multiple
+      placeholder="Select"
+      style="width: 240px"
+    >
+      <el-option
+        v-for="item in options"
+        :key="item.value"
+        :label="item.label"
+        :value="item.value"
+      />
+    </el-select>
+  </div>
 </template>
 
 <script setup lang="ts">
 import { ref,computed ,watch} from 'vue'
 import { Plus, Minus } from '@element-plus/icons-vue'
-
+const value1 = ref([])
+const options = [
+  {
+    value: 'Option1',
+    label: 'Option1',
+  },
+  {
+    value: 'Option2',
+    label: 'Option2',
+  },
+  {
+    value: 'Option3',
+    label: 'Option3',
+  },
+  {
+    value: 'Option4',
+    label: 'Option4',
+  },
+  {
+    value: 'Option5',
+    label: 'Option5',
+  },
+]
 const props = defineProps({
   minList: {
     type: Array as () => Array<{ toValue: string, value: string, vaild: boolean }>,

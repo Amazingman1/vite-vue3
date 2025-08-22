@@ -1,5 +1,5 @@
 // src/directives/focus.ts
-import { nextTick, type Directive, type DirectiveBinding } from 'vue'
+import { nextTick, type Directive } from 'vue'
 
 /**
  * 指令绑定值类型

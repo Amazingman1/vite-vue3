@@ -27,5 +27,49 @@ export default defineConfig({
         rewrite: (path) => path.replace(/^\/api/, '')
       }
     }
+  },
+  build: {
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+      },
+      format: {
+        comments: false, // 移除所有注释
+      }
+    },
+    rollupOptions: {
+      output: {
+        entryFileNames: 'assets/js/[name]-[hash].js',
+        chunkFileNames: 'assets/js/chunks/[name]-[hash].js',
+        assetFileNames (chunkInfo) {
+
+          const extType =   chunkInfo.name?.split('.').pop() || '';
+          const isFont = ['ttf', 'woff', 'woff2'].includes(extType)
+          const isImage = ['png', 'jpg', 'jpeg', 'gif', 'svg'].includes(extType)
+
+          if (chunkInfo.name && chunkInfo.name.endsWith('.css')) {
+            return 'assets/css/[name]-[hash][extname]';
+          }
+          if (isFont) {
+            return 'assets/fonts/[name]-[hash][extname]';
+          }
+          if (isImage) {
+            return 'assets/images/[name]-[hash][extname]';
+          }
+
+          return 'assets/[ext]/[name]-[hash][extname]';
+        },
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            return id.toString().split('node_modules/')[1].split('/')[0].toString();
+          }
+        },
+      },
+    },
+    chunkSizeWarningLimit: 1000, // 设置警告阈值为1000KB 
+    // reportCompressedSize: false, // 关闭压缩文件大小报告
+    
   }
 })
