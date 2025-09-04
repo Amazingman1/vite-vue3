@@ -38,7 +38,7 @@ const routes: RouteRecordRaw[] = [
     },
     component: () => import('@/views/JsonView.vue')
   },
-     {
+  {
     path: '/tree',
     name: 'tree',
     meta: {
@@ -46,7 +46,17 @@ const routes: RouteRecordRaw[] = [
       icon: 'label'
     },
     component: () => import('@/views/VueTree.vue')
+  },
+       {
+    path: '/customePan',
+    name: 'CustomePan',
+    meta: {
+      title: 'CustomePan',
+      icon: 'label'
+    },
+    component: () => import('@/views/CustomePan.vue')
   }
+  // CustomePan.vue
 ]
 
 export default routes

@@ -64,7 +64,7 @@ const closeDialog = () => {
   background-color: #ebebeb;
   padding: 16px;
 }
-.dialog-footer{
+ {
   padding:0 16px 16px 16px;
 }
 

@@ -50,8 +50,6 @@ $item-height: 36px;
 $line-color: #dddfe6;
 //节点上下边距
 $item-margin: 14px;
-//节点缩进距离
-$item-padding-left: 25px;
 //横向连接线宽度
 $item-direction-line-width: 20px;
 

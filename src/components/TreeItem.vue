@@ -8,7 +8,7 @@
           </el-icon>
         </div>
       </span>
-      <div class="flex items-center w-full gap-10">
+      <div class="flex items-center w-full gap-10 border border-[#E3ECFF]">
         <div class="p-1 w-[120px] shrink-0">
           <el-input v-model="itemObj.labelEn"></el-input>
         </div>
@@ -107,8 +107,6 @@ function addChildChild(index: number) {
 <style lang="scss" scoped>
 //节点高度
 $item-height: 36px;
-//节点边框颜色
-$item-border-color: blue;
 //节点之间的连接线颜色
 $line-color: #dddfe6;
 //节点上下边距
@@ -151,9 +149,7 @@ $item-direction-line-width: 20px;
 
 .node-wrapper {
   position: relative;
-  //  border: 1px solid $item-border-color;
   border-radius: 5px;
-  // padding: 0 10px;
   height: $item-height;
   box-sizing: border-box;
   display: flex;
@@ -161,7 +157,6 @@ $item-direction-line-width: 20px;
 }
 
 .hasParent {
-  // margin-left: 40px;
   &::before {
     content: "";
     height: 1px;
