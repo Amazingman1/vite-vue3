@@ -55,6 +55,15 @@ const routes: RouteRecordRaw[] = [
       icon: 'label'
     },
     component: () => import('@/views/CustomePan.vue')
+  },
+         {
+    path: '/closePage',
+    name: 'ClosePage',
+    meta: {
+      title: 'CustomePan',
+      icon: 'label'
+    },
+    component: () => import('@/views/ClosePage.vue')
   }
   // CustomePan.vue
 ]

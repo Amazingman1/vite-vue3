@@ -64,8 +64,5 @@ const closeDialog = () => {
   background-color: #ebebeb;
   padding: 16px;
 }
- {
-  padding:0 16px 16px 16px;
-}
 
 </style>

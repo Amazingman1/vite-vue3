@@ -56,6 +56,10 @@ $item-direction-line-width: 20px;
 .li-wrapper {
   position: relative;
 }
+.demo{
+  height: 45vh;
+  overflow: auto;
+}
 .demo > .leftBorder:first-child::before {
   content: "";
   width: 1px;

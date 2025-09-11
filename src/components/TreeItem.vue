@@ -26,7 +26,7 @@
           <!-- 新增同级 -->
             <el-dropdown trigger="click">
               <el-button type="primary" :icon="Plus" circle size="small" ></el-button>
-              <template #dropdown>
+              <template #dropdown> 
                 <el-dropdown-menu>
                   <el-dropdown-item @click="addSibling">添加相邻节点</el-dropdown-item>
                   <el-dropdown-item v-if="itemObj.dataType !== 'String'" @click="addChild">添加子节点</el-dropdown-item>
