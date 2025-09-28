@@ -16,6 +16,7 @@ import { setupRouter } from './router'
 import focusDirective from './directive/focus'
 import '@/style/index.css'
 import '@/style/btn.scss'
+import 'vue-virtual-scroller/dist/vue-virtual-scroller.css'
 const app = createApp(App)
 // import VueRouter from 'vue-router'
 

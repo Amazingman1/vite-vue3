@@ -6,66 +6,93 @@
  * @FilePath: /metavers-tourism-app/src/router/routes/modules/common.ts
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
-import type { RouteRecordRaw } from 'vue-router'
+import type { RouteRecordRaw } from "vue-router"
 
 // 路由规则
 const routes: RouteRecordRaw[] = [
   {
-    path: '/home',
-    name: 'home',
+    path: "/home",
+    name: "home",
     meta: {
-      title: '首页',
+      title: "首页",
       // <van-icon name="label" />
-      icon: 'wap-home'
+      icon: "wap-home"
     },
-    component: () => import('@/views/HomePage.vue')
+    component: () => import("@/views/HomePage.vue")
   },
   {
-    path: '/login',
-    name: 'login',
+    path: "/login",
+    name: "login",
     meta: {
-      title: '登录',
-      icon: 'label'
+      title: "登录",
+      icon: "label"
     },
-    component: () => import('@/views/LoginPage.vue')
+    component: () => import("@/views/LoginPage.vue")
+  },
+  {
+    path: "/json",
+    name: "json",
+    meta: {
+      title: "json编辑",
+      icon: "label"
+    },
+    component: () => import("@/views/JsonView.vue")
+  },
+  {
+    path: "/tree",
+    name: "tree",
+    meta: {
+      title: "treeVue",
+      icon: "label"
+    },
+    component: () => import("@/views/VueTree.vue")
+  },
+  {
+    path: "/customePan",
+    name: "CustomePan",
+    meta: {
+      title: "CustomePan",
+      icon: "label"
+    },
+    component: () => import("@/views/CustomePan.vue")
+  },
+  {
+    path: "/closePage",
+    name: "ClosePage",
+    meta: {
+      title: "CustomePan",
+      icon: "label"
+    },
+    component: () => import("@/views/ClosePage.vue")
+  },
+  {
+    path: "/testTree",
+    name: "TestTree",
+    meta: {
+      title: "CustomePan",
+      icon: "label"
+    },
+    component: () => import("@/views/testTree/index.vue")
+  },
+  {
+    path: "/button",
+    name: "Button",
+    meta: {
+      title: "CustomePan",
+      icon: "label"
+    },
+    component: () => import("@/views/testTree/button.vue")
   },
     {
-    path: '/json',
-    name: 'json',
+    path: "/treeTable",
+    name: "TreeTable",
     meta: {
-      title: 'json编辑',
-      icon: 'label'
+      title: "TreeTable",
+      icon: "label"
     },
-    component: () => import('@/views/JsonView.vue')
-  },
-  {
-    path: '/tree',
-    name: 'tree',
-    meta: {
-      title: 'treeVue',
-      icon: 'label'
-    },
-    component: () => import('@/views/VueTree.vue')
-  },
-       {
-    path: '/customePan',
-    name: 'CustomePan',
-    meta: {
-      title: 'CustomePan',
-      icon: 'label'
-    },
-    component: () => import('@/views/CustomePan.vue')
-  },
-         {
-    path: '/closePage',
-    name: 'ClosePage',
-    meta: {
-      title: 'CustomePan',
-      icon: 'label'
-    },
-    component: () => import('@/views/ClosePage.vue')
+    component: () => import("@/views/testTree/treeTable.vue")
   }
-  // CustomePan.vue
+  // treeTable.vue.vue
 ]
 
 export default routes
