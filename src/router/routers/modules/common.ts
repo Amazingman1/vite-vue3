@@ -83,6 +83,15 @@ const routes: RouteRecordRaw[] = [
     },
     component: () => import("@/views/testTree/button.vue")
   },
+   {
+    path: "/Select",
+    name: "Select",
+    meta: {
+      title: "Select",
+      icon: "label"
+    },
+    component: () => import("@/views/test.vue")
+  },
     {
     path: "/treeTable",
     name: "TreeTable",

@@ -25,6 +25,7 @@ const rootRoute: RouteRecordRaw = {
   name: 'root',
   redirect: '/home'
 }
+
 // 404页面路由规则
 const notFoundPage: RouteRecordRaw = {
   // vue-router@4的变化，舍弃*通配符

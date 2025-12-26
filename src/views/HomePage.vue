@@ -5,6 +5,7 @@
   <el-button type="primary" @click="cancleViald">取消</el-button>
   <el-button type="primary" @click="showDailog">对话框</el-button>
   <List v-model:min-list="list"></List>
+  <Canvas></Canvas>
   <CustomDialog v-model:visible="showDialog" title="快速导入" @confirm="importData">
     <template #default>
       <el-form label-position="top" label-width="100px" class="mt-4">
@@ -20,6 +21,7 @@
 import { ref } from 'vue'
 import CustomDialog from './CustomDialog.vue'
 import List from './List.vue'
+import Canvas from './canvas/canva.vue'
 const list = ref<any[]>([{ toValue: '', value: '', vaild: false }])
 const showDialog = ref(false)
 const importContent = ref('')
